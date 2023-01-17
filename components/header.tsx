@@ -2,12 +2,13 @@ import Link from 'next/link'
 import React from 'react'
 
 const Header: React.FC = () => (
-  <header className="bg-white sm:h-30 py-5 border-b sm:sticky top-0">
+  <header className="bg-white sm:h-30 py-5 border-b sm:sticky top-0 z-10">
     <div className="max-w-5xl mx-auto px-6">
       <div className="w-full flex flex-col sm:flex-row justify-center sm:justify-between items-center">
         <div className="flex flex-col justify-between sm:flex-row items-center mb-4 sm:mb-0">
           <img src="/icbc-logo.png" className="w-20" alt="ICBC Tarlac"/>
-          <div className="sm:ml-8 flex space-x-5 text-center">
+        </div>
+        <div className="sm:ml-8 flex space-x-5 text-center">
             <Link href="/" className="text-gray-500 hover:text-pink-700">
               Home
             </Link>
@@ -18,7 +19,6 @@ const Header: React.FC = () => (
               Blog
             </Link>
           </div>
-        </div>
         <Link
           href="/admin"
           prefetch={false}
